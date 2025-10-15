@@ -1,19 +1,20 @@
 
-console.log("Plugin lancé");
+//select all btns 
+const btns = document.querySelectorAll(".btn");
 
-let btns = document.querySelectorAll(".btn"); // tous les boutons
 
-btns.forEach(element => {
-    element.addEventListener("click", () => {
-        const content = element.nextElementSibling;
-        const iconsplus = element.querySelector(".iconplus");
-        const iconminus = element.querySelector(".iconminus")
+// for all btn do this
+btns.forEach(btn => {
+    //add event on clic 
+    btn.addEventListener("click", () => {
+        //for the next element after element. (here its div accordion-content)
+        const content = btn.nextElementSibling;
 
-            // Toggle contenu
-    content.style.display = content.style.display === "block" ? "none" : "block";
 
-    // Toggle icône
-    iconsplus.hidden = !iconsplus.hidden;
-    iconminus.hidden = !iconminus.hidden;
+        // Toggle content (add and remove class css .active)
+        content.classList.toggle("active");
+
+        // Toggle icônes (add and remove .open in css.)
+        btn.classList.toggle("open");
     });
 });

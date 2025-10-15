@@ -4,8 +4,7 @@ body {
     padding: 0;
 }
 
-/*police d'écriture*/
-
+/*Fonts */
 @font-face {
     font-family: "popins-semi";
     src: url(../fonts/Poppins-SemiBold.ttf);
@@ -20,8 +19,9 @@ body {
     font-family: "inter-regular";
     src: url(../fonts/Inter_18pt-Regular.ttf);
 }
+
 /*Container */
-#accordion-container{
+#accordion-container {
     display: flex;
     flex-direction: column;
     max-width: 60%;
@@ -33,43 +33,67 @@ body {
 }
 
 /*Btn*/
-
 .btn {
-  all: unset;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  color: #2F265F;
-  margin-left: 100px;
-  align-self: flex-start;
-  font-size: 24px;
-  font-family: 'popins-semi','Courier New', Courier, monospace;
+    all: unset;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #2F265F;
+    margin-left: 100px;
+    align-self: flex-start;
+    font-size: 24px;
+    font-family: 'popins-semi','Courier New', Courier, monospace;
+    position: relative;      /* pour icônes absolues */
+    padding-left: 30px;      /* espace pour icônes */
 }
 
 .btn p {
     margin: 0;
 }
 
-/* content */
+/*Icon + icon transition*/
+.btn .iconplus,
+.btn .iconminus {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: opacity 0.2s ease;
+}
 
-.accordion-content{
-    display: none;
-    font-size: 20px ;
+
+.btn .iconplus { opacity: 1; }
+.btn .iconminus { opacity: 0; }
+
+
+.btn.open .iconplus { opacity: 0; }
+.btn.open .iconminus { opacity: 1; }
+
+
+/*Content-accordion*/
+.accordion-content {
+    font-size: 20px;
     font-family: 'inter-regular','Courier New', Courier, monospace;
     margin-left: 140px;
     max-width: 80%;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease;
 }
-.accordion-content p{
-    margin-top: 5px ;
 
+.accordion-content.active {
+    max-height: 500px; 
 }
-/*title H2*/
 
+.accordion-content p {
+    margin-top: 5px;
+}
+
+/*Title H2*/
 h2 {
     font-size: 36px;
     color: #2F265F;
     font-family: 'popins-bold','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     align-self: center;
-    
 }
