@@ -18,3 +18,14 @@ btns.forEach(btn => {
         btn.classList.toggle("open");
     });
 });
+
+
+// dark mods 
+
+const darkbtn = document.querySelector("#mode-switch");
+
+if (darkbtn) {
+  darkbtn.addEventListener("click", () => {
+    document.body.classList.toggle("darkmode");
+  });
+}
