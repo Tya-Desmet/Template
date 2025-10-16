@@ -80,13 +80,6 @@ body {
 }
 
 /*Icon + icon transition*/
-.iconplustest{
-  width: 80px;
-  height: 80px;
-  background: url("../img/plus.svg") no-repeat center;
-  background-size: contain;
-  fill: var(--title-color);
-}
 svg {
     display: inline-block;
 
