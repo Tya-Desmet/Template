@@ -1,0 +1,94 @@
+:root{
+    --background: #ffff;
+    --ui-background: #EBE4FF;
+    --title-color: #2F265F;
+    --text-color: #6550B9;
+    --darkmod-background: #14121F;
+    --shadow-color: rgba(0,0,0,0.25);
+}
+
+.darkmode {
+    --background: #14121F;
+    --ui-background: #291F43;
+    --title-color: #E2DDFE;
+    --text-color: #BAA7FF;
+    --darkmod-background: #ffff;
+    --shadow-color: rgba(208, 126, 247, 0.25);
+}
+
+/* Global */
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* fonts */ 
+
+@font-face {
+    font-family: "popins-semi";
+    src: url(../fonts/Poppins-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: "popins-bold";
+    src: url(../fonts/Poppins-Bold.ttf);
+}
+
+@font-face {
+    font-family: "inter-regular";
+    src: url(../fonts/Inter_18pt-Regular.ttf);
+}
+
+/* Accordion container */
+
+.accordion-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    margin: auto;
+}
+ 
+.accordion-container h2  {
+    margin: auto;
+    margin-bottom: 60px;
+}
+
+/* button */
+
+.accordion-btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    box-shadow: 0px 0px 5px 1px var(--shadow-color);
+    background-color: transparent;
+    margin-bottom: 10px;
+}
+
+.accordion-btn:hover{
+    background-color: var(--ui-background);
+}
+
+.accordion-btn h3 {
+    margin-left: 24px;
+}
+
+.iconplus {
+    margin-right: 24px;
+}
+
+.iconplus.active {
+    display: none;
+}
+
+.iconminus {
+    display: none;
+}
+
+/*Accordion content*/
+
+.accordion-content {
+    border: solid;
+    display: none;
+}
