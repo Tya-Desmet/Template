@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/main.js" defer></script>
     <title>Accordion-2</title>
 </head>
 <body>
@@ -21,51 +22,59 @@
         </button>
     </header>
     <main>
-        <section class="accordion-container">
+        <div class="accordion-container">
             <h2>This is title yeah !</h2>
-            <button class="accordion-btn">
-                <h3> The title 1 is long </h3>
-                <svg viewBox="0 0 24 25" width="24" height="25" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="iconplus">
-                    <path  d="M13.1429 1.77652C13.1429 1.14535 12.6312 0.633667 12 0.633667C11.3688 0.633667 10.8571 1.14535 10.8571 1.77652V11.4908H1.14286C0.51168 11.4908 0 12.0025 0 12.6337C0 13.2648 0.51168 13.7765 1.14286 13.7765H10.8571V23.4908C10.8571 24.1219 11.3688 24.6337 12 24.6337C12.6312 24.6337 13.1429 24.1219 13.1429 23.4908V13.7765H22.8571C23.4882 13.7765 24 13.2648 24 12.6337C24 12.0025 23.4882 11.4908 22.8571 11.4908H13.1429V1.77652Z"/>
-                </svg>
-                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" class="iconminus" xmlns="http://www.w3.org/2000/svg" >
-                    <path d="M3.59998 12C3.59998 11.5582 3.95815 11.2 4.39998 11.2H19.6C20.0417 11.2 20.4 11.5582 20.4 12C20.4 12.4418 20.0417 12.8 19.6 12.8H4.39998C3.95815 12.8 3.59998 12.4418 3.59998 12Z" />
-                </svg>
-            </button>
+            <div class="accordion-container-content">
+                <button class="accordion-btn">
+                    <h3> The title 1 is long </h3>
+                    <svg viewBox="0 0 24 25" width="24" height="25" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="iconplus">
+                        <path  d="M13.1429 1.77652C13.1429 1.14535 12.6312 0.633667 12 0.633667C11.3688 0.633667 10.8571 1.14535 10.8571 1.77652V11.4908H1.14286C0.51168 11.4908 0 12.0025 0 12.6337C0 13.2648 0.51168 13.7765 1.14286 13.7765H10.8571V23.4908C10.8571 24.1219 11.3688 24.6337 12 24.6337C12.6312 24.6337 13.1429 24.1219 13.1429 23.4908V13.7765H22.8571C23.4882 13.7765 24 13.2648 24 12.6337C24 12.0025 23.4882 11.4908 22.8571 11.4908H13.1429V1.77652Z"/>
+                    </svg>
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" class="iconminus" xmlns="http://www.w3.org/2000/svg" >
+                        <path d="M3.59998 12C3.59998 11.5582 3.95815 11.2 4.39998 11.2H19.6C20.0417 11.2 20.4 11.5582 20.4 12C20.4 12.4418 20.0417 12.8 19.6 12.8H4.39998C3.95815 12.8 3.59998 12.4418 3.59998 12Z" />
+                    </svg>
+                </button>
+                <div class="accordion-content">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                </div>
 
-            <div class="accordion-content">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
             </div>
 
-            <button class="accordion-btn">
-                <h3>The title 2 is short</h3>
+            <div class="accordion-container-content">
+                <button class="accordion-btn">
+                    <h3>The title 2 is short</h3>
 
-                <svg viewBox="0 0 24 25" width="24" height="25" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="iconplus">
-                    <path  d="M13.1429 1.77652C13.1429 1.14535 12.6312 0.633667 12 0.633667C11.3688 0.633667 10.8571 1.14535 10.8571 1.77652V11.4908H1.14286C0.51168 11.4908 0 12.0025 0 12.6337C0 13.2648 0.51168 13.7765 1.14286 13.7765H10.8571V23.4908C10.8571 24.1219 11.3688 24.6337 12 24.6337C12.6312 24.6337 13.1429 24.1219 13.1429 23.4908V13.7765H22.8571C23.4882 13.7765 24 13.2648 24 12.6337C24 12.0025 23.4882 11.4908 22.8571 11.4908H13.1429V1.77652Z"/>
-                </svg>
-                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" class="iconminus" xmlns="http://www.w3.org/2000/svg" >
-                    <path d="M3.59998 12C3.59998 11.5582 3.95815 11.2 4.39998 11.2H19.6C20.0417 11.2 20.4 11.5582 20.4 12C20.4 12.4418 20.0417 12.8 19.6 12.8H4.39998C3.95815 12.8 3.59998 12.4418 3.59998 12Z" />
-                </svg>
-            </button>
+                    <svg viewBox="0 0 24 25" width="24" height="25" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="iconplus">
+                        <path  d="M13.1429 1.77652C13.1429 1.14535 12.6312 0.633667 12 0.633667C11.3688 0.633667 10.8571 1.14535 10.8571 1.77652V11.4908H1.14286C0.51168 11.4908 0 12.0025 0 12.6337C0 13.2648 0.51168 13.7765 1.14286 13.7765H10.8571V23.4908C10.8571 24.1219 11.3688 24.6337 12 24.6337C12.6312 24.6337 13.1429 24.1219 13.1429 23.4908V13.7765H22.8571C23.4882 13.7765 24 13.2648 24 12.6337C24 12.0025 23.4882 11.4908 22.8571 11.4908H13.1429V1.77652Z"/>
+                    </svg>
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" class="iconminus" xmlns="http://www.w3.org/2000/svg" >
+                        <path d="M3.59998 12C3.59998 11.5582 3.95815 11.2 4.39998 11.2H19.6C20.0417 11.2 20.4 11.5582 20.4 12C20.4 12.4418 20.0417 12.8 19.6 12.8H4.39998C3.95815 12.8 3.59998 12.4418 3.59998 12Z" />
+                    </svg>
+                </button>
+                
+                <div class="accordion-content">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                </div>
             
-            <div class="accordion-content">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
             </div>
+            <div class="accordion-container-content">
+                <button class="accordion-btn">
+                    <h3>The title 2 is more long than 3</h3>
 
-            <button class="accordion-btn">
-                <h3>The title 3 is more long than 2</h3>
-
-                <svg viewBox="0 0 24 25" width="24" height="25" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="iconplus">
-                    <path  d="M13.1429 1.77652C13.1429 1.14535 12.6312 0.633667 12 0.633667C11.3688 0.633667 10.8571 1.14535 10.8571 1.77652V11.4908H1.14286C0.51168 11.4908 0 12.0025 0 12.6337C0 13.2648 0.51168 13.7765 1.14286 13.7765H10.8571V23.4908C10.8571 24.1219 11.3688 24.6337 12 24.6337C12.6312 24.6337 13.1429 24.1219 13.1429 23.4908V13.7765H22.8571C23.4882 13.7765 24 13.2648 24 12.6337C24 12.0025 23.4882 11.4908 22.8571 11.4908H13.1429V1.77652Z"/>
-                </svg>
-                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" class="iconminus" xmlns="http://www.w3.org/2000/svg" >
-                    <path d="M3.59998 12C3.59998 11.5582 3.95815 11.2 4.39998 11.2H19.6C20.0417 11.2 20.4 11.5582 20.4 12C20.4 12.4418 20.0417 12.8 19.6 12.8H4.39998C3.95815 12.8 3.59998 12.4418 3.59998 12Z" />
-                </svg>
-            </button>
-
-            <div class="accordion-content">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <svg viewBox="0 0 24 25" width="24" height="25" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="iconplus">
+                        <path  d="M13.1429 1.77652C13.1429 1.14535 12.6312 0.633667 12 0.633667C11.3688 0.633667 10.8571 1.14535 10.8571 1.77652V11.4908H1.14286C0.51168 11.4908 0 12.0025 0 12.6337C0 13.2648 0.51168 13.7765 1.14286 13.7765H10.8571V23.4908C10.8571 24.1219 11.3688 24.6337 12 24.6337C12.6312 24.6337 13.1429 24.1219 13.1429 23.4908V13.7765H22.8571C23.4882 13.7765 24 13.2648 24 12.6337C24 12.0025 23.4882 11.4908 22.8571 11.4908H13.1429V1.77652Z"/>
+                    </svg>
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" class="iconminus" xmlns="http://www.w3.org/2000/svg" >
+                        <path d="M3.59998 12C3.59998 11.5582 3.95815 11.2 4.39998 11.2H19.6C20.0417 11.2 20.4 11.5582 20.4 12C20.4 12.4418 20.0417 12.8 19.6 12.8H4.39998C3.95815 12.8 3.59998 12.4418 3.59998 12Z" />
+                    </svg>
+                </button>
+                
+                <div class="accordion-content">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                </div>
+            
             </div>
+        </div>
 
         </section>
     </main>

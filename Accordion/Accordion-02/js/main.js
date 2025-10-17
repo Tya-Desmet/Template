@@ -1,6 +1,6 @@
 
 //select all btns 
-const btns = document.querySelectorAll(".btn");
+const btns = document.querySelectorAll(".accordion-btn");
 
 
 // for all btn do this

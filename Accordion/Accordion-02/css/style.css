@@ -21,6 +21,7 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: var(--background);
 }
 
 /* fonts */ 
@@ -40,30 +41,51 @@ body {
     src: url(../fonts/Inter_18pt-Regular.ttf);
 }
 
+h2, h3 {
+    font-family: 'popins-bold','Courier New', Courier, monospace;
+
+/* 
+*
+*  START TO COPY HERE MY COMPONENT // DONT FORGET CHANGE COLOR FOR YOUR PROJECT !
+*
+*/
+}
+
 /* Accordion container */
 
 .accordion-container {
     display: flex;
     flex-direction: column;
     max-width: 80%;
-    margin: auto;
+    margin: auto;;
+    gap: 20px;
 }
  
 .accordion-container h2  {
     margin: auto;
     margin-bottom: 60px;
+    color: var(--title-color);
+}
+
+.accordion-container-content {
+    box-shadow: 0px 0px 5px 1px var(--shadow-color);
 }
 
 /* button */
 
 .accordion-btn{
     display: flex;
+    position: relative;
     justify-content: space-between;
     align-items: center;
     border: none;
-    box-shadow: 0px 0px 5px 1px var(--shadow-color);
     background-color: transparent;
-    margin-bottom: 10px;
+    width: 100%;
+
+}
+
+.accordion-btn.open{
+    margin-bottom: 0px;
 }
 
 .accordion-btn:hover{
@@ -72,23 +94,92 @@ body {
 
 .accordion-btn h3 {
     margin-left: 24px;
+    color: var(--title-color);
 }
 
-.iconplus {
-    margin-right: 24px;
+.accordion-btn .iconplus,
+.accordion-btn .iconminus {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: opacity 0.2s ease;
 }
 
-.iconplus.active {
-    display: none;
-}
+.accordion-btn .iconplus { opacity: 1; }
+.accordion-btn .iconminus { opacity: 0; }
 
-.iconminus {
-    display: none;
-}
+
+.accordion-btn.open .iconplus { opacity: 0; }
+.accordion-btn.open .iconminus { opacity: 1; }
 
 /*Accordion content*/
 
 .accordion-content {
-    border: solid;
-    display: none;
+    max-height:0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    color: var(--text-color);
+    background-color: var(--ui-background);
+    background-color: opacity(0.5);
+}
+
+
+.accordion-content.active {
+    max-height: 500px;
+    transition: max-height 0.6s ease
+
+}
+
+.accordion-content p {
+    padding: 20px;
+    margin: 0;
+    font-family:'inter-regular' ,'Courier New', Courier, monospace;
+}
+
+
+/*
+*
+* STOP TO COPY HERE MY COMPONENT 
+*
+*/
+
+/* Darkmode */ 
+
+header{
+    display: flex;
+    justify-content: space-between;
+    height: 60px; /* ou ce que tu veux */
+    color: white;
+
+
+}
+#mode-switch {
+    margin: 10px;
+    border-radius: 50px;
+    background-color: var(--darkmod-background);
+    margin-left: auto;
+    position: relative;
+
+}
+
+.circle {
+  position: absolute;
+  top: 2px;
+  left: 4px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: var(--background);  /*Color for cirle*/ 
+  z-index: 2; /* circle on svg*/
+  transition: left 0.3s ease, background-color 0.3s ease
+}
+
+
+body.darkmode .circle {
+  left: 32px; /* slide in left*/
+}
+
+.iconMoon{
+    color: white;
 }
